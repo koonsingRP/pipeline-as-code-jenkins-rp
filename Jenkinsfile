@@ -50,7 +50,7 @@ pipeline {
             }
         }
    
-        stage('Code Build') {
+        stage('Enviroment Analysis') {
             parallel {
               
                  stage('task 1') {
@@ -58,13 +58,13 @@ pipeline {
               
                                echo "task 1"
                       }
-                 }
+                   }
                     stage('task 2') {
                      steps {
               
                                echo "task 2"
                       }
-                 }
+                      }
                     stage('task 3') {
                      steps {
               
