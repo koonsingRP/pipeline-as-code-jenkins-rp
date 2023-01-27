@@ -49,7 +49,36 @@ pipeline {
                  echo "Code Build"
             }
         }
-
+   
+        stage('Code Build') {
+            parallel {
+              
+                 stage('task 1') {
+                     steps {
+              
+                               echo "task 1"
+                      }
+                 }
+                    stage('task 2') {
+                     steps {
+              
+                               echo "task 2"
+                      }
+                 }
+                    stage('task 3') {
+                     steps {
+              
+                               echo "task 3"
+                      }
+                 }
+                  
+   
+                
+                
+            }
+        }
+        
+        
         stage('Printing All Global Variables') {
             steps {
                 sh """
